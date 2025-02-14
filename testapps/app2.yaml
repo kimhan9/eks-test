@@ -4,11 +4,15 @@ metadata:
   name: webapp-2
   namespace: argocd
 spec:
+  project: webapp
+  source:
+    path: apps/app2
+    repoURL: https://github.com/kimhan9/eks-test.git
+    targetRevision: HEAD
   destination:
     namespace: webapp
     server: https://kubernetes.default.svc
-  project: webapp
-  source:
-    path: argocd/example/app-of-app/webapp-2
-    repoURL: https://github.com/foxutech/kubernetes.git
-    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true

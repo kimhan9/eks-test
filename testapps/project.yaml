@@ -10,6 +10,8 @@ spec:
  destinations:
   - server: "*"
     namespace: "*"
+  #- namespace: sample-app
+  #  server: https://kubernetes.default.svc
  clusterResourceWhitelist:
   - group: "*"
     kind: "*"
