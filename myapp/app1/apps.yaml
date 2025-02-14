@@ -9,7 +9,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/kimhan9/eks-test.git
-    path: app1
+    path: myapp/app1
     targetRevision: HEAD
   destination:
     server: https://dev.cluster.server
