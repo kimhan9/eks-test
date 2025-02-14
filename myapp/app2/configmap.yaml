@@ -1,0 +1,14 @@
+# confimap_yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+ name: nginx-config2
+ namespace: test
+data:
+ index.html: |
+   <html>
+   <head><title>Hello World 2</title></head>
+   <body>
+   <h1>Hello World 1</h1>
+   </body>
+   </html>
